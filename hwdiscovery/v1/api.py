@@ -41,8 +41,7 @@ def get_devices_info():
         # Return the extracted information in JSON format
         return jsonify(devices_info)
     except Exception as e:
-        raise(e)
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
